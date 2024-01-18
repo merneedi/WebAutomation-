@@ -26,6 +26,10 @@
 
 
 
+
+
+- pip install pytest-dotenv
+- pip install selenium
 - pip install allure-pytest requests
 - pip install pytest selenium pytest-html openpyxl 
 - pip install selenium-page-factory 
@@ -35,3 +39,8 @@
 - pip install pytest-reportportal
 
 pytest -n auto tests/vwoLoginTests/pom/test_*
+
+- pytest -n auto "tests/vwoLoginTests/test_vwologin.py" -s -v --alluredir = allure-results
+- allure serve allure-results
+- pytest -n auto "tests/vwoLoginTests/test_vwologin.py" -s -v 
+- allure generate
