@@ -39,10 +39,10 @@
 - pip install pytest-reportportal
 
 ## Running parallelly
-pytest -n auto tests/vwoLoginTests/pom/test_*
+- pytest -n auto tests/vwoLoginTests/pom/test_*
 
 ## specific testcase to run
-pytest -n auto -k "smoke" tests/vwoLoginTests/pom/test_*
+- pytest -n auto -k "smoke" tests/vwoLoginTests/pom/test_*
 
 - pytest -n auto "tests/vwoLoginTests/test_vwologin.py" -s -v --alluredir = allure-results
 - allure serve allure-results
@@ -50,3 +50,6 @@ pytest -n auto -k "smoke" tests/vwoLoginTests/pom/test_*
 - allure generate
 
 
+## bdd to run 
+- behave -f allure_behave.formatter:AllureFormatter -o allure-reports ./features
+- allure serve allure-reports

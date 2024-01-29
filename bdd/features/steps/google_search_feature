@@ -1,0 +1,11 @@
+Feature: Guess the word
+
+  # The first example has two steps
+  Scenario: Maker starts a game
+    When the Maker starts a game
+    Then the Maker waits for a Breaker to join
+
+  Scenario: VWO Negative test
+    Given I am on the App.Vwo.com
+    When I enter email "admin" and "admin" password
+    Then I should see "error" message on page.
