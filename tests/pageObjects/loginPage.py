@@ -48,5 +48,8 @@ class LoginPage(object):
         self.get_password().send_keys(pwd)
         self.get_submit_button().click()
 
+    def get_error_message_text(self):
+        return self.get_error_message().text
+
     #def click_free_trail(self):
         #self.get_free_trail().click()
